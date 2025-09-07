@@ -33,7 +33,7 @@ class PostController extends Controller
             $data = $request->validate([
             'name' => 'required|max:300|string',
             'email' => 'required|max:300|string',
-            'image' => 'required|mimes:png,jpg,jpeg,webp|max:1024',
+            'image' => 'required|mimes:png,jpg,jpeg,webp|max:4000',
         ]);
 
         if($request->has('image')){
