@@ -38,12 +38,14 @@
             <p>Your health is our priority</p>
             <button class="btn1">Download APK</button>  
         </div>
-        <div class="picture"></div>
+       <div class="picture"></div>
     </div>
     <!-- end -->
 
-    <!-- Medicine -->
-    <div class="medicine" id="medicine">
+
+    {{-- -----------------------------MEDECINE-------------------- --}}
+    
+    {{-- <div class="medicine" id="medicine">
         <div class="text">
             <h1>Medicine Information</h1>
             <div class="inp">
@@ -391,8 +393,9 @@
                 <span class="indicator" data-slide="4"></span>
             </div>
         </div>
-    </div>
-    <!-- end -->
+    </div> --}}
+   
+    {{-- ------------------------------END------------------------ --}}
      
     <!-- Prescription -->
     <div class="Prescription" id="Prescription">
@@ -411,7 +414,10 @@
                         @csrf
                         <div class="form-group">
                             <label for="">Patient Name:</label>
-                            <input type="text" name="name" value="{{ old('name') }}">
+                            <input type="text" name="name" value="{{ old('name') }}"   placeholder="Enter you name" 
+                            onfocus="this.placeholder=''" 
+                            onblur="this.placeholder='Enter your email'" 
+                            required >
                             @error('name')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -419,7 +425,10 @@
                         
                         <div class="form-group">
                             <label for="">Email Address:</label>
-                            <input type="text" name="email" value="{{ old('email') }}">
+                            <input type="text" name="email" value="{{ old('email') }}"  placeholder="Enter you email" 
+                            onfocus="this.placeholder=''" 
+                            onblur="this.placeholder='Enter your email'" 
+                            required>
                             @error('email')
                                 <span class="error">{{ $message }}</span>
                             @enderror
@@ -520,10 +529,12 @@
     </div>
     {{-- announcement] --}}
     <div class="announcement" id="announcement">
-        <h1>announcement</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam p
-            laceat facere, nihil quidem explicabo illum, dolor sapiente quas expedita enim, <br>
-            reprehenderit voluptatem. Animi quo labore porro consectetur quaerat hic earum!</p>
+        <div class="announcement-content">
+            <h1 class="announcement-title"><i class="fa-solid fa-bullhorn"></i> Announcements</h1>
+            <p class="announcement-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                placeat facere, nihil quidem explicabo illum, dolor sapiente quas expedita enim,
+                reprehenderit voluptatem. Animi quo labore porro consectetur quaerat hic earum!</p>
+        </div>
     </div>
 
     {{-- contact us --}}
@@ -580,7 +591,7 @@
                 <h1>Store Location</h1>
             <div class="locationsb">
                 <div class="location-img"></div>
-                <button>View on Google Maps</button>
+                <button><a href="https://maps.app.goo.gl/cCNemo8raVHYFW8r5">View on Google Maps</a></button>
             </div>
         </div>
         <div class="contact-wus">

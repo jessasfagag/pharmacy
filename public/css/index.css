@@ -121,6 +121,7 @@ nav ul li a.active {
   align-items: center;
   padding: 2rem 5%;
   scroll-margin-top: 70px;
+    border-bottom: 1px solid var(--border);
 }
 
 .box1 {
@@ -161,12 +162,16 @@ nav ul li a.active {
   flex: 1;
   max-width: 500px;
   height: 400px;
-  background-color: grey;
   border-radius: 10px;
   margin-left: 2rem;
+  background-image: url('/images/medicinepicture.png');
+  background-size: cover;   
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
-/* Medicine Section */
+
+/* -----------------------------------eto yung product info-------------------------- */
 .medicine {
   min-height: 650px;
   padding: 2rem 5%;
@@ -347,7 +352,7 @@ input[type="search"]::-ms-clear {
   font-weight: 700;
   color: var(--accent);
 }
-/* enddddd */
+/* ---------------------------------------------------enddddd ---------------------------------------*/
 
 
 /* Prescription Section */
@@ -356,6 +361,7 @@ input[type="search"]::-ms-clear {
   padding: 2rem 5%;
   scroll-margin-top: 70px;
   background-color: #f5f7ff;
+  border-bottom: 1px solid var(--border);
 }
 
 
@@ -574,24 +580,43 @@ input[type="search"]::-ms-clear {
 
 /* announcement */
 .announcement{
-    min-height: 600px;
-    padding: 2rem 5%;
+    min-height: 500px;
+    padding: 3rem 5%;
     scroll-margin-top: 70px;
     background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.announcement h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.announcement-content{
+    width: 100%;
+    max-width: 960px;
+    background: linear-gradient(180deg, #ffffff, #f9fafb);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.announcement-title{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
     color: var(--text);
 }
 
-.announcement p {
+.announcement-title i{
+    color: var(--accent);
+}
+
+.announcement-text{
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.75;
     color: var(--muted);
-    max-width: 800px;
-    margin: 0 auto;
 }
 /* end */
 
@@ -769,7 +794,7 @@ input[type="search"]::-ms-clear {
   color: var(--text);
 }
 
-.location-img{
+.location-img {
   width: 100%;
   max-width: 550px;
   height: 300px;
@@ -781,6 +806,10 @@ input[type="search"]::-ms-clear {
   justify-content: center;
   color: #666;
   font-size: 1rem;
+  background-image: url('/images/mapimage1.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .location button {
@@ -793,20 +822,26 @@ input[type="search"]::-ms-clear {
   background: var(--accent);
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(22,163,74,0.18);
+  box-shadow: 0 4px 12px rgba(22,163,74,0.18); 
+}
+.location a{
+   color: white; 
+  text-decoration: none;
+
 }
 
 .soc-med1 {
   text-align: center;
   margin-top: 20px;
+ 
 }
 
 .soc-med {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 10px; /* Para may space sa pagitan ng buttons at guhit */
-  gap: 10px; /* Para pantay ang space sa pagitan ng buttons */
+  padding-bottom: 10px;
+  gap: 10px; 
 }
 
 .soc-med button {
@@ -850,17 +885,17 @@ input[type="search"]::-ms-clear {
   background-color: var(--surface);
   color: var(--text);
   display: flex;
-  justify-content: space-between; /* space between left and right */
+  justify-content: space-between; 
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  padding: 20px 40px; /* spacing on left and right */
+  padding: 20px 40px; 
   border-top: 1px solid var(--border);
 }
 
 .footer-left, .footer-right {
   display: flex;
-  gap: 20px; /* space between links */
+  gap: 20px; 
 }
 
 .footer p {
